@@ -6,3 +6,6 @@
 
 # Build
 docker build -t "tag_name" .
+
+# How to run
+dokcer run -it bienkma/dlib-gpu-cuda7.5-alpine-anaconda3 --name dlib-gpu sh
