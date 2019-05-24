@@ -48,8 +48,8 @@ RUN chmod +x cuda_*_linux.run && \
            uninstall_cuda.pl
 
 # Install python lib
-ADD  tv_engine_conda.yml .
-RUN conda env update -f tv_engine_conda.yml
+ADD  conda.yml .
+RUN conda env update -f conda.yml
 ENV PATH=/usr/local/cuda-7.5/bin:$PATH LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
 RUN cd dlib && python setup.py install --yes USE_AVX_INSTRUCTIONS --yes DLIB_USE_CUDA
 
